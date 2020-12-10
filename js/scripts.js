@@ -1,9 +1,9 @@
-const usersSelect = document.querySelector(".users-select");
+const usersSelect = $_(".users-select");
 const userResultAbout = $_(".users-result-about")
 
-const elUserTamplate = document.querySelector("#usersOption").content;
+const elUserTamplate = $_("#usersOption").content;
 
-const elUsersRolad = document.querySelector("#userAboutReolad").content;
+const elUsersRolad = $_("#userAboutReolad").content;
 
 
 
@@ -23,6 +23,8 @@ const renderUsersOption = function (users) {
 }
 
 
+
+
 const renderUsersAbout = function (evt) {
   userResultAbout.innerHTML = "";
 
@@ -38,16 +40,16 @@ const renderUsersAbout = function (evt) {
   for (const user of filtered) {
     const usersRolad = elUsersRolad.cloneNode(true);
 
-    usersRolad.querySelector('.user-id').textContent = user.getUserId;
-    usersRolad.querySelector('.user-data').textContent = user.visitDay;
-    usersRolad.querySelector('.user-visit').textContent = user.visit ? 'OK' : '-';
-    usersRolad.querySelector('.user-score').textContent = user.score;
+    $_('.user-id', usersRolad).textContent = user.getUserId;
+    $_('.user-data', usersRolad).textContent = user.visitDay;
+    $_('.user-visit', usersRolad).textContent = user.visit ? 'OK' : '-';
+    $_('.user-score', usersRolad).textContent = user.score;
 
     if (!user.visit) {
-      usersRolad.querySelector('.user-about').classList.add('error-color');
+      $_('.user-about', usersRolad).classList.add('error-color');
     }
     else {
-      usersRolad.querySelector('.user-about').classList.add('bg-success');
+      $_('.user-about', usersRolad).classList.add('bg-success');
     }
 
     userResultAbout.appendChild(usersRolad);
