@@ -5,7 +5,7 @@ const elUserTamplate = document.querySelector("#usersOption").content;
 
 const elUsersRolad = document.querySelector("#userAboutReolad").content;
 
-// console.log(elUsersRolad);
+
 
 const renderUsersOption = function (users) {
   const usersOptionsFregment = document.createDocumentFragment();
