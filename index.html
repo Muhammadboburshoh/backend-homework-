@@ -11,61 +11,45 @@
 <body>
 
 
-  <h1 class="text-center">O'quvchilar haqida ma'lumot</h1>
+  <div class="container">
+    <h1 class="text-center my-3 h2">O'quvchilarning darslarga qatnashish jadvali</h1>
 
-  <form class="form" action="https://echo.htmlacademy.ru">
-
-    <select name="userSelect" id="userSelect">
-    </select>
-  </form>
-
-  <table class="table mt-5">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Data</th>
-        <th scope="col">Visit</th>
-        <th scope="col">Score</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>04-09-2020</td>
-        <td>OK</td>
-        <td>6</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>04-09-2020</td>
-        <td>OK</td>
-        <td>6</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>04-09-2020</td>
-        <td>OK</td>
-        <td>6</td>
-      </tr>
-    </tbody>
-  </table>
+    <form class="form" action="https://echo.htmlacademy.ru">
+  
+      <select class="users-select form-control w-50 mx-auto" name="usersSelect" id="usersSelect"></select>
+    </form>
+  
+    <table class="table mt-5">
+      <thead>
+        <tr class="bg-secondary text-white">
+          <th scope="col">#</th>
+          <th scope="col">Data</th>
+          <th scope="col">Visit</th>
+          <th scope="col">Score</th>
+        </tr>
+      </thead>
+      <tbody class="users-result-about"></tbody>
+    </table>
+  </div>
 
   <template id="usersOption">
-    <option class="userOption" value="Sardorjon"></option>
+    <option class="user-option" value="Sardorjon"></option>
   </template>
 
   <template id="userAboutReolad">
-    <tr>
-      <th scope="row">1</th>
-      <td>04-09-2020</td>
-      <td>OK</td>
-      <td>6</td>
+    <tr class="user-about">
+      <th class="user-id" scope="row">1</th>
+      <td class="user-data" >04-09-2020</td>
+      <td class="user-visit">OK</td>
+      <td class="user-score">6</td>
     </tr>
   </template>
 
 
   <script src="js/jquery-3.5.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/data.js"></script>
   <script src="js/scripts.js"></script>
 </body>
 </html>
