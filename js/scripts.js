@@ -44,7 +44,7 @@ const renderUsersAbout = function (evt) {
     usersRolad.querySelector('.user-score').textContent = user.score;
 
     if (!user.visit) {
-      usersRolad.querySelector('.user-about').classList.add('bg-warning');
+      usersRolad.querySelector('.user-about').classList.add('error-color');
     }
     else {
       usersRolad.querySelector('.user-about').classList.add('bg-success');

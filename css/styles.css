@@ -22,3 +22,8 @@ img {
 h1 {
   font-weight: bold;
 }
+
+.error-color {
+  background: #FF9494;
+}
+
